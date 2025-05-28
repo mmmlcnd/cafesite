@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<meta name="description" content="課題カフェサイト作成中">
+<meta name="author" content="課題カフェサイト">
+<meta name="format-detection" content="email=no,telephone=no,address=no">
+<title>課題カフェサイト</title>
+
+<link href="css/reset.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+<link rel="icon" href="images/logo.png" sizes="16x16" type="image/png">
+<link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
+<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+
+<link href="js/slick/slick-theme.css" rel="stylesheet">
+<link href="js/slick/slick.css" rel="stylesheet">
+
+<script src="js/script.js"></script>
+<script src="js/index.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
+<!-- メインビジュアルスライダーslick -->
+<script>
+$(function () {
+    $('.slider-main').slick({
+    centerMode: true,
+    centerPadding: '25%',
+  });
+});
+</script>
+
+</head>
+
+<body id="top">
+
+<!-- メニューJS -->
+<script>
+    var startPos = 300, winScrollTop = 0;
+    $(window).on('scroll',function(){
+        winScrollTop = $(this).scrollTop();
+        if (winScrollTop >= startPos) {
+            $('.site-header').addClass('show');
+        } else {
+            $('.site-header').removeClass('show');
+        }
+    });
+</script>
+
+<!-- fImgスライドインJS -->
+<!-- 確認する：空白が入ったので調節すること -->
+<script>
+let winHeight,winScroll,scrollPos;
+$(window).on('load', function() {
+    var winScroll = $(window).scrollTop();
+    var winHeight = $(window).height();
+    var scrollPos = winHeight * 0.2 + winScroll; // 最初のアニメーションの開始位置
+
+    // 初期表示時のアニメーション
+    $(".slideinLeft, .slideinRight").each(function() {
+        if ($(this).offset().top <= scrollPos) {
+            $(this).addClass("fImgShow").css("transition", "transform 0.5s ease");
+        }
+    });
+
+    // スクロール時のアニメーション制御
+    $(window).on('scroll', function() {
+        var winScroll = $(window).scrollTop();
+        var immediateScrollPos = winScroll + winHeight;
+
+        $(".slideinLeft, .slideinRight").each(function() {
+            if ($(this).offset().top <= immediateScrollPos) {
+                $(this).addClass("fImgShow").css("transition", "transform 0.1s ease");
+            } else {
+                $(this).removeClass("fImgShow").css("transition", "none");
+            }
+        });
+    });
+});
+
+</script>
+
+<script>
+
+    //pagetop(に戻る部分)
+	$('[href="#top"]').click(function(){
+		$("html,body").animate({scrollTop:0},800);
+		return false;
+	});
+
+    $(window).scroll(function(){
+		if($(this).scrollTop()>300){
+			$("#pageTop").fadeIn();
+		}else{
+			$("#pageTop").fadeOut();
+		}
+	});
+	
+
+</script>
+
+<div id="wrap">
+    <header >
+        <aside class="
+         flex flex--bet">
+            <nav class="gnav site-header">
+                <div class="site-logo">
+                    <img class="site-logo__img" src="images/logo.png" alt="logo">
+                    <p>美味しいお酒とお肉料理のお店<span>Sample Cafe</span></p>
+                </div>
+                <ul class="gnav__menu flex flex--bet">
+                    <li class="gnav__menu__item">
+                        <a class="gnav__menu__item__link" href="#sec1">ホーム</a>
+                    </li>
+                    <li class="gnav__menu__item">
+                        <a class="gnav__menu__item__link" href="#sec1">当店について</a>
+                    </li>
+                    <li class="gnav__menu__item">
+                        <a class="gnav__menu__item__link" href="">メニュー</a>
+                    </li>
+                    <li class="gnav__menu__item">
+                        <a class="gnav__menu__item__link" href="">アクセス</a>
+                    </li>
+                    <li class="gnav__menu__item">
+                        <a class="gnav__menu__item__link" href="">ご予約・お問合せ</a>
+                    </li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- <aside id="sideMenu">
+            <input type="checkbox" id="drawer-checkbox">
+            <label id="drawer-icon" for="drawer-checkbox">
+                <span></span>
+            </label>
+            <label id="drawer-close" for="drawer-checkbox"></label>
+            <nav id="gNavi">
+                <ul>
+                    <li><a href="#top"><img src="images/logo.png" alt=""></a></li>
+                        <ul class="menuCont">
+                            <li><a href="" target="_blank" rel="noopener noreferrer">ホーム</a></li>
+                            <li><a href="">当店について</a></li>
+                            <li><a href="">メニュー</a></li>
+                            <li><a href="">アクセス</a></li>
+                            <li><a href="">ご予約・お問合せ</a></li>
+                        </ul>
+                </ul>
+            </nav>
+        </aside> -->
+
+        <div class="titleArea">
+            <a href="#top">
+                <img src="images/logo.png" alt="課題カフェロゴ">
+                <h1>
+                    美味しいお酒とお肉料理のお店
+                    <span>Sample Cafe</span>
+                </h1>
+            </a>
+        </div>
+		<ul class="slider-main" id="js-slider">
+			<li class="mainV"><img src="./images/cake1.jpg" alt=""></li>
+			<li class="mainV"><img src="./images/cake2.jpg" alt=""></li>
+			<li class="mainV"><img src="./images/cake3.jpg" alt=""></li>
+			<li class="mainV"><img src="./images/cake4.jpg" alt=""></li>
+		</ul>
+		  <div class="dots-2"></div>
+    </header>
+    <main>
+        <section id="contentsWrap">
+
+            <section class="featureArea">
+                <h2>
+                    <div class="headingBox">
+                        <div class="headingDeco">私</div>
+                        <div class="headingNoDeco">たちのこだわり食材</div>
+                    </div>
+                </h2>
+                <article class="featureItem">
+                    <div class="fImgArea fImgSlideIn slideinLeft">
+                        <img src="images/cake1.jpg" alt="特徴写真">
+                    </div>
+                    <div class="fTextArea">
+                        <h3 class="fItemTitle">ここに見出しをいれます</h3>
+                        <p class="fItemText">ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                </article><!--/.featureItem-->
+                <article class="featureItem">
+                    <div class="fImgArea fImgSlideIn slideinRight">
+                        <img src="images/cake2.jpg" alt="特徴写真">
+                    </div>
+                    <div class="fTextArea">
+                        <h3 class="fItemTitle">ここに見出しをいれます</h3>
+                        <p class="fItemText">ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                </article><!--/.featureItem-->
+                <article class="featureItem">
+                    <div class="fImgArea fImgSlideIn slideinLeft">
+                        <img src="images/cake3.jpg" alt="特徴写真">
+                    </div>
+                    <div class="fTextArea">
+                        <h3 class="fItemTitle">ここに見出しをいれます</h3>
+                        <p class="fItemText">ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                </article><!--/.featureItem-->
+                <article class="featureItem">
+                    <div class="fImgArea fImgSlideIn slideinRight">
+                        <img src="images/cake4.jpg" alt="特徴写真">
+                    </div>
+                    <div class="fTextArea">
+                        <h3 class="fItemTitle">ここに見出しをいれます</h3>
+                        <p class="fItemText">ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。</p>
+                    </div>
+                </article><!--/.featureItem-->
+            </section><!--/.featureArea-->
+        
+            <section class="newsArea">
+                <h2>
+                    <div class="headingBox">
+                        <div class="headingDeco">W</div>
+                        <div class="headingNoDeco">hat's New</div>
+                    </div>
+                    <div class="headingJn">お知らせ</div>    
+                </h2>
+                <ul class="newsItem">
+                    <li>
+                        <div class="newsDate"><time>20XX/00/00</time></div>
+                        <h3 class="newsTitle"><a href="#top">記事タイトル</a></h3>
+                    </li>
+                    <li>
+                        <div class="newsDate"><time>20XX/00/00</time></div>
+                        <h3 class="newsTitle"><a href="#top">記事タイトル</a></h3>
+                    </li>
+                    <li>
+                        <div class="newsDate"><time>20XX/00/00</time></div>
+                        <h3 class="newsTitle"><a href="#top">記事タイトル</a></h3>
+                    </li>
+                    <li>
+                        <div class="newsDate"><time>20XX/00/00</time></div>
+                        <h3 class="newsTitle"><a href="#top">記事タイトル</a></h3>
+                    </li>
+                </ul><!--/.newsItem-->
+                <div class="gotolog"><a href="#top">&raquo;過去ログ</a></div>
+            </section><!--/.newsArea-->
+
+            <section class="accessArea">
+                <h2>
+                    <div class="headingBox">
+                        <div class="headingDeco">A</div>
+                        <div class="headingNoDeco">ccess</div>
+                    </div>
+                    <div class="headingJn">アクセスマップ</div>
+                </h2>
+                <div class="map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.6660809038726!2d135.19095871496958!3d34.6883761913863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008efbd89bc4e7%3A0xd901fd97f5288c44!2z44CSNjUwLTAwMzQg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Lqs55S677yW77yX!5e0!3m2!1sja!2sjp!4v1580296857980!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                </div>
+            </section><!--/.accessArea-->
+        </section><!--/#contentsWrap-->
+        
+
+
+    </main>
+    <footer>
+        <nav class="footerNavi">
+            <div class="footerNaviMenu">
+                <ul class="footerNaviMenuColumn">
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                </ul>
+                <ul class="footerNaviMenuColumn">
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                </ul>
+                <ul class="footerNaviMenuColumn">
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                </ul>
+                <ul class="footerNaviMenuColumn">
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                </ul>
+                <ul class="footerNaviMenuColumn">
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                </ul>
+            </div>
+            <ul class="snsList">
+				<li><a href="aboutm.html"><img src="images/icon-f.png" alt="facebook"></a></li>
+				<li><a href="aboutm.html"><img src="images/icon-i.png" alt="instagram"></a></li>
+				<li><a href="aboutm.html"><img src="images/icon-t.png" alt="x"></a></li>
+            </ul>
+        </nav>
+        <p class="copyright"><small>Copyright&copy;課題カフェサイト All Rights Reserved.</small></p>
+        <p id="pageTop"><a href="#top"><img src="images/totop.png" alt="ページトップ"></a></p>    
+    </footer>
+
+</div><!--/#wrap-->
+</body>
+</html>

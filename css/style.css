@@ -1,0 +1,585 @@
+@charset "UTF-8";
+/* Base
+================================ */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    color: #414141;
+    line-height: 1.5;
+    font-family: "MS Pゴシック", "serif";
+}
+
+a:link,
+a:visited {
+    color: #303437;
+}
+
+a:hover {
+    color: #901636;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    vertical-align: bottom;
+}
+
+h1 {
+    color: white;
+    font-size: 1.5rem; /* 24px */
+}
+
+span {
+    display: block;
+}
+
+h2 {
+    margin: 0 0 30px 0;
+}
+
+h2 .headingBox {
+    display: flex;
+    justify-content: center;
+    font-size: 3.75rem; /* 60px */
+    margin: 10px;
+    height: 150px;
+}
+
+h2 .headingDeco {
+    padding: 20px;
+    border: #D1D1D1 1px solid;
+    width: 120px;
+    font-size: 5rem; /* 80px */
+    text-shadow: 5px 5px lightgrey;
+}
+
+h2 .headingNoDeco {
+    padding: 25px 10px;
+    margin: 10px 0;
+}
+
+h2 .headingJn {
+    font-size: 1.25rem; /* 20px */
+    display: block;
+}
+
+h3 {
+    font-size: 1.5rem; /* 24px */
+}
+
+#pageTop {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+}
+
+/* Drawer */
+#drawer-checkbox {
+    display: none;
+}
+
+/* Layout
+================================ */
+#wrap {
+    flex-wrap: wrap;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+header {
+    position: relative;
+}
+
+.site-logo {
+    display: flex;
+    padding-left: 100px;
+}
+
+.site-logo img {
+    height: 80px;
+}
+
+.site-logo p {
+    color: #fff;
+    padding: 20px;
+    font-size: 14px;
+}
+
+.site-logo p span {
+    font-size: 24px;
+}
+
+.site-header {
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,1));
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 120px;
+    z-index: 999;
+    display: flex;
+    visibility: hidden;
+}
+
+.site-header.show {
+    visibility: visible;
+}
+
+.gnav__menu {
+    display: flex;
+}
+.gnav__menu li {
+    margin: 20px 30px;
+    font-size: 24px;
+}
+
+.gnav__menu li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+header .titleArea {
+    width: 20%;
+    margin: 0 auto;
+    padding: 2%;
+    text-align: center;
+    background-color: rgb(0, 0, 0);
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: 38%;
+    opacity: 70%;
+}
+
+header .titleArea a {
+    text-decoration: none;
+}
+
+header .titleArea img {
+    width: 80px;
+}
+
+header .titleArea h1 {
+    padding: 20px 0;
+}
+
+header .titleArea h1 span {
+    padding: 30px 0;
+    font-size: 2rem; /* 32px */
+}
+
+header .mainV img {
+    width: 100%;
+}
+
+main {
+    width: 100%;
+    display: flex;
+}
+
+#contentsWrap {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.featureArea {
+    width: 100%;
+}
+
+.featureArea .featureItem {
+    margin: 0 auto;
+    display: flex;
+    background-color: white;
+    padding: 15px 0;
+}
+
+.featureArea .featureItem:nth-child(2),
+.featureArea .featureItem:nth-child(4) {
+    text-align: left;
+}
+
+.featureArea .featureItem:nth-child(3),
+.featureArea .featureItem:nth-child(5) {
+    flex-direction: row-reverse;
+    text-align: right;
+}
+
+.featureArea .featureItem .fImgArea,
+.featureArea .featureItem .fTextArea {
+    width: 50%;
+}
+
+/* 特徴写真スライドイン */
+
+.featureItem{
+	overflow: hidden;
+}
+
+.fImgSlideIn{
+	margin: 50px auto;
+    transition: 0.3s cubic-bezier(0.75, 0, 0.25, 1);
+
+}
+.slideinLeft{
+	transform: translateX(calc(-50vw - 50%));
+}
+.slideinRight{
+	transform: translateX(calc(50vw + 50%));
+}
+.fImgShow{
+	transform: translateX(0);
+
+}
+
+/* 
+.slideinLeft {
+    animation: slideinLeft 3s infinite;
+  }
+  
+  @keyframes slideinLeft {
+    0% {
+      transform: translateX(-50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  .slideinRight {
+    animation: slideinRight 3s infinite;
+  }
+  
+  @keyframes slideinRight {
+    0% {
+      transform: translateX(50px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+ */
+.featureArea .featureItem .fImgArea img {
+    width: 100%;
+}
+
+.featureArea .featureItem .fTextArea {
+    padding: 0 30px;
+}
+
+.featureArea .featureItem .fTextArea .fItemTitle {
+    color: brown;
+    font-size: 2.1875rem; /* 35px */
+    padding: 10px 0;
+}
+
+.featureArea .featureItem .fTextArea .fItemText {
+    font-size: 1.5625rem; /* 25px */
+}
+
+.newsArea {
+    font-size: 1.5rem;
+}
+
+.newsArea .newsItem li {
+    display: flex;
+    padding: 10px 0px;
+    border-top: dashed 1px lightgray;
+}
+
+.newsArea .newsItem li:nth-child(4) {
+    border-bottom: dashed 1px lightgray;
+}
+
+.newsArea .newsItem .newsDate {
+    color: #4F0000;
+    padding-right: 40px;
+}
+
+.newsArea .gotolog {
+    width: 10%;
+    padding: 10px 10px 0 0;
+    margin: 0 0 0 auto;
+}
+
+.accessArea .map {
+    width: 100%;
+    height: 500px;
+    padding: 50px 0;
+}
+
+.accessArea .map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+#sideMenu {
+    display: none;
+    width: 180px;
+    justify-content: center;
+    border-width: thin;
+    border-color: #000;
+    border-left-style: dashed;
+    padding: 80px 0 0 30px;
+}
+
+#sideMenu ul li img {
+    display: none;
+    width: 50px;
+    margin: 0 auto;
+    padding: 0 0 30px;
+}
+
+.menuCont li {
+    padding: 0.6em 0.3em 0.5em;
+}
+
+footer {
+    width: 100%;
+    padding: 50px 0 0 0;
+    background-color: black;
+    font-size: 1.3rem;
+}
+
+footer nav .footerNaviMenu {
+    display: flex;
+    width: 100%;
+}
+
+.footerNaviMenuColumn {
+    margin: 0 100px;
+}
+
+.footerNaviMenuColumn li {
+    margin: 10px 0;
+}
+
+.footerNaviMenuColumn li a:link,
+.footerNaviMenuColumn li a:visited {
+    color: white;
+}
+
+.footerNaviMenuColumn li a:hover {
+    color: #901636;
+}
+
+.snsList {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.snsList li {
+    width: 50px;
+    margin: 50px 20px;
+}
+
+.snsList img {
+    width: 100px;
+}
+
+.copyright {
+    padding: 10px 0;
+    width: 100%;
+    background-color: #9F1B3B;
+    color: white;
+    font-size: 1rem;
+}
+
+/* ///////////////////////////////////////////////////*/
+/* ///追加ソースコード*/
+/* /////////////////////////////////////////////////// */
+
+/* 親要素の制約を解除 */
+.slider-main {
+    overflow: visible;
+}
+
+    /* スライドの制約を解除 */
+    .slider-main .slick-slide {
+    width: auto !important;
+    max-width: none !important;
+    }
+
+    /* 画像の幅を強制的に広げる */
+    .slider-main .slick-slide img {
+    display: block;
+    width: 90% !important; /* 必要な幅に設定し、!importantを追加 */
+    height: auto;
+    object-fit: cover;
+    }
+
+    /* ＜要確認＞画面幅に合わせるために画像サイズを大きくすると画像がだんおちしてしまう */
+
+
+    .slider-main .slick-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    top: 180px;
+    z-index: 1;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+    }
+
+  .slider-main .slick-arrow::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #09000d;
+    border-width: 3px 3px 0 0;
+    position: absolute;
+    top: 24px;
+    transform: rotate(45deg);
+  }
+  .slider-main .slick-next {
+    right: 0;
+  }
+  .slider-main .slick-prev {
+    left: 0;
+  }
+  .slider-main .slick-next::before {
+    left: 20px;
+  }
+  .slider-main .slick-prev::before {
+    border-width: 0 0 3px 3px;
+    right: 22px;
+  }
+  
+
+/* //////////////////////////////////////////// */
+
+/* Drawer Layout */
+@media screen and (max-width: 1271px) {
+    #wrap {
+        max-width: 1271px;
+    }
+
+    main {
+        display: block;
+    }
+
+    #drawer-icon {
+        display: inline-block;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+        z-index: 300;
+    }
+
+    #drawer-icon span {
+        position: absolute;
+        left: 7px;
+        top: 24px;
+        width: 36px;
+        height: 2px;
+        border-radius: 4px;
+        background: #333;
+    }
+
+    #drawer-icon span:before,
+    #drawer-icon span:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: #333;
+        border-radius: 4px;
+        content: "";
+    }
+
+    #drawer-icon span:before {
+        top: -12px;
+    }
+
+    #drawer-icon span:after {
+        top: 12px;
+    }
+
+    #drawer-checkbox:checked ~ #drawer-icon span {
+        background: rgba(51, 51, 51, 0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #drawer-checkbox:checked ~ #drawer-icon span:before,
+    #drawer-checkbox:checked ~ #drawer-icon span:after {
+        top: 0;
+    }
+
+    #drawer-checkbox:checked ~ #drawer-icon span:before {
+        transform: rotate(-45deg);
+    }
+
+    #drawer-checkbox:checked ~ #drawer-icon span:after {
+        transform: rotate(45deg);
+    }
+
+    #gNavi {
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 200px;
+        height: 100%;
+        padding: 100px 0 0 30px;
+        z-index: 200;
+        transform: translateX(100%);
+        transition: all 0.3s ease-in-out, 0s;
+    }
+
+    #gNavi ul {
+        margin: 0 auto;
+    }
+
+    #drawer-checkbox:checked ~ #gNavi {
+        background: white;
+        box-shadow: 6px 0 25px rgba(0, 0, 0, 0.16);
+        transform: translateX(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    #drawer-close {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0);
+        z-index: 100;
+        transition: all 0.3s ease-in-out, 0s;
+    }
+
+    #drawer-checkbox:checked ~ #drawer-close {
+        display: block;
+        background: rgba(0, 0, 0, 0.3);
+    }
+}
+
+/* PC Layout */
+/* @media screen and (min-width: 1272px) {
+    header h1 img {
+        margin-right: 180px;
+    }
+}
+
+@media screen and (max-width: 1271px) {
+    #sideMenu {
+        border: none;
+    }
+} */
