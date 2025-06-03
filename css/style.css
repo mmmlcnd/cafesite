@@ -186,6 +186,76 @@ header .mainV img {
     width: 100%;
 }
 
+/* メインビジュアルスライダーslick */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-main .slick-slide {
+    height: 100vh;
+    position: relative;
+}
+
+.slider-main .slick-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider-main .slick-arrow {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #fff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    font-size: 0;
+    position: absolute;
+    top: 50vh;
+    z-index: 1;
+    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
+}
+
+.slider-main .slick-arrow::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    border: 1px solid #09000d;
+    border-width: 3px 3px 0 0;
+    position: absolute;
+    top: 24px;
+    transform: rotate(45deg);
+}
+
+.slider-main .slick-next {
+    right: 0;
+}
+
+.slider-main .slick-prev {
+    left: 0;
+}
+
+.slider-main .slick-next::before {
+    left: 20px;
+}
+
+.slider-main .slick-prev::before {
+    border-width: 0 0 3px 3px;
+    right: 22px;
+}
+
 main {
     width: 100%;
     display: flex;
@@ -223,7 +293,7 @@ main {
     width: 50%;
 }
 
-/* 特徴写真スライドイン */
+/* fImg特徴写真スライドイン */
 
 .featureItem{
 	overflow: hidden;
@@ -399,105 +469,6 @@ footer nav .footerNaviMenu {
     font-size: 1rem;
 }
 
-
-/* スライダー画面いっぱい */
-
-html,
-body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-.slider-main {
-    height: 100vh;
-    overflow: hidden;
-    position: relative;
-}
-
-.slider-main .slick-slide {
-    height: 100vh;
-    position: relative;
-}
-
-.slider-main .slick-slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
-}
-
-
-
-/* ///////////////////////////////////////////////////*/
-/* ///追加ソースコード*/
-/* /////////////////////////////////////////////////// */
-
-/* 親要素の制約を解除 */
-/* .slider-main {
-    overflow: visible;
-}
-
-    /* スライドの制約を解除 */
-    /* .slider-main .slick-slide {
-    width: auto !important;
-    max-width: none !important;
-    } */
-
-    /* 画像の幅を強制的に広げる */
-    /* .slider-main .slick-slide img {
-    display: block;
-    width: 90% !important; /* 必要な幅に設定し、!importantを追加 */
-    /* height: auto;
-    object-fit: cover;
-    } */ 
-
-    /* ＜要確認＞画面幅に合わせるために画像サイズを大きくすると画像がだんおちしてしまう */
-
-
-    .slider-main .slick-arrow {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    background-color: #fff;
-    cursor: pointer;
-    border: none;
-    outline: none;
-    font-size: 0;
-    position: absolute;
-    top: 50vh;
-    z-index: 1;
-    filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
-    }
-
-  .slider-main .slick-arrow::before {
-    content: '';
-    display: block;
-    width: 12px;
-    height: 12px;
-    border: 1px solid #09000d;
-    border-width: 3px 3px 0 0;
-    position: absolute;
-    top: 24px;
-    transform: rotate(45deg);
-  }
-  .slider-main .slick-next {
-    right: 0;
-  }
-  .slider-main .slick-prev {
-    left: 0;
-  }
-  .slider-main .slick-next::before {
-    left: 20px;
-  }
-  .slider-main .slick-prev::before {
-    border-width: 0 0 3px 3px;
-    right: 22px;
-  }
-  
-
-/* //////////////////////////////////////////// */
-
 /* Drawer Layout */
 @media screen and (max-width: 1271px) {
     #wrap {
@@ -608,15 +579,24 @@ body {
     }
 }
 
-/* PC Layout */
-/* @media screen and (min-width: 1272px) {
-    header h1 img {
-        margin-right: 180px;
-    }
+/* ドロワー表示：スマホのみ */
+@media (max-width: 767px) {
+  #sideMenu {
+    display: block;
+  }
+
+  .site-header {
+    display: none;
+  }
 }
 
-@media screen and (max-width: 1271px) {
-    #sideMenu {
-        border: none;
-    }
-} */
+/* PC表示：768px以上 */
+@media (min-width: 768px) {
+  #sideMenu {
+    display: none;
+  }
+
+  .site-header {
+    display: flex; /* 必要に応じて調整 */
+  }
+}

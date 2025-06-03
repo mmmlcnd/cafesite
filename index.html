@@ -99,8 +99,26 @@ $(function () {
 
 <div id="wrap">
     <header >
-        <aside class="
-         flex flex--bet">
+        <!-- ドロワーメニュー -->
+        <aside id="sideMenu">
+            <input type="checkbox" id="drawer-checkbox">
+            <label id="drawer-icon" for="drawer-checkbox">
+                <span></span>
+            </label>
+            <label id="drawer-close" for="drawer-checkbox"></label>
+            <nav id="gNavi">
+                <ul class="menuCont">
+                    <li><a href="" target="_blank" rel="noopener noreferrer">ホーム</a></li>
+                    <li><a href="">当店について</a></li>
+                    <li><a href="">メニュー</a></li>
+                    <li><a href="">アクセス</a></li>
+                    <li><a href="">ご予約・お問合せ</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- PCレイアウトメニュー -->
+        <aside class="flex flex--bet">
             <nav class="gnav site-header">
                 <div class="site-logo">
                     <img class="site-logo__img" src="images/logo.png" alt="logo">
@@ -125,26 +143,6 @@ $(function () {
                 </ul>
             </nav>
         </aside>
-
-        <!-- <aside id="sideMenu">
-            <input type="checkbox" id="drawer-checkbox">
-            <label id="drawer-icon" for="drawer-checkbox">
-                <span></span>
-            </label>
-            <label id="drawer-close" for="drawer-checkbox"></label>
-            <nav id="gNavi">
-                <ul>
-                    <li><a href="#top"><img src="images/logo.png" alt=""></a></li>
-                        <ul class="menuCont">
-                            <li><a href="" target="_blank" rel="noopener noreferrer">ホーム</a></li>
-                            <li><a href="">当店について</a></li>
-                            <li><a href="">メニュー</a></li>
-                            <li><a href="">アクセス</a></li>
-                            <li><a href="">ご予約・お問合せ</a></li>
-                        </ul>
-                </ul>
-            </nav>
-        </aside> -->
 
         <div class="titleArea">
             <a href="#top">
