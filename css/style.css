@@ -29,7 +29,15 @@ img {
 
 h1 {
     color: white;
-    font-size: 1.5rem; /* 24px */
+    /* font-size: 1.5rem; 24px */
+}
+
+.h1-smaller {
+    font-size: 1.2rem;
+}
+
+.h1-bigger {
+    font-size: 1.8rem;
 }
 
 span {
@@ -172,7 +180,6 @@ header .titleArea h1 {
 
 header .titleArea h1 span {
     padding: 30px 0;
-    font-size: 2rem; /* 32px */
 }
 
 header .mainV img {
@@ -392,28 +399,58 @@ footer nav .footerNaviMenu {
     font-size: 1rem;
 }
 
+
+/* スライダー画面いっぱい */
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.slider-main {
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+}
+
+.slider-main .slick-slide {
+    height: 100vh;
+    position: relative;
+}
+
+.slider-main .slick-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+
+
 /* ///////////////////////////////////////////////////*/
 /* ///追加ソースコード*/
 /* /////////////////////////////////////////////////// */
 
 /* 親要素の制約を解除 */
-.slider-main {
+/* .slider-main {
     overflow: visible;
 }
 
     /* スライドの制約を解除 */
-    .slider-main .slick-slide {
+    /* .slider-main .slick-slide {
     width: auto !important;
     max-width: none !important;
-    }
+    } */
 
     /* 画像の幅を強制的に広げる */
-    .slider-main .slick-slide img {
+    /* .slider-main .slick-slide img {
     display: block;
     width: 90% !important; /* 必要な幅に設定し、!importantを追加 */
-    height: auto;
+    /* height: auto;
     object-fit: cover;
-    }
+    } */ 
 
     /* ＜要確認＞画面幅に合わせるために画像サイズを大きくすると画像がだんおちしてしまう */
 
@@ -428,7 +465,7 @@ footer nav .footerNaviMenu {
     outline: none;
     font-size: 0;
     position: absolute;
-    top: 180px;
+    top: 50vh;
     z-index: 1;
     filter: drop-shadow(0px 3px 6px rgba(0, 0, 0, 0.16));
     }

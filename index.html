@@ -7,7 +7,7 @@
 <meta name="description" content="課題カフェサイト作成中">
 <meta name="author" content="課題カフェサイト">
 <meta name="format-detection" content="email=no,telephone=no,address=no">
-<title>課題カフェサイト</title>
+<title>カフェサイト</title>
 
 <link href="css/reset.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
@@ -28,8 +28,7 @@
 <script>
 $(function () {
     $('.slider-main').slick({
-    centerMode: true,
-    centerPadding: '25%',
+    centerMode: false
   });
 });
 </script>
@@ -40,7 +39,7 @@ $(function () {
 
 <!-- メニューJS -->
 <script>
-    var startPos = 300, winScrollTop = 0;
+    let startPos = 300, winScrollTop = 0;
     $(window).on('scroll',function(){
         winScrollTop = $(this).scrollTop();
         if (winScrollTop >= startPos) {
@@ -52,40 +51,37 @@ $(function () {
 </script>
 
 <!-- fImgスライドインJS -->
-<!-- 確認する：空白が入ったので調節すること -->
 <script>
-let winHeight,winScroll,scrollPos;
-$(window).on('load', function() {
-    var winScroll = $(window).scrollTop();
-    var winHeight = $(window).height();
-    var scrollPos = winHeight * 0.2 + winScroll; // 最初のアニメーションの開始位置
+    let winHeight,winScroll,scrollPos;
+    $(window).on('load', function() {
+        let winScroll = $(window).scrollTop();
+        let winHeight = $(window).height();
+        let scrollPos = winHeight * 0.2 + winScroll; // 最初のアニメーションの開始位置
 
-    // 初期表示時のアニメーション
-    $(".slideinLeft, .slideinRight").each(function() {
-        if ($(this).offset().top <= scrollPos) {
-            $(this).addClass("fImgShow").css("transition", "transform 0.5s ease");
-        }
-    });
-
-    // スクロール時のアニメーション制御
-    $(window).on('scroll', function() {
-        var winScroll = $(window).scrollTop();
-        var immediateScrollPos = winScroll + winHeight;
-
+        // 初期表示時のアニメーション
         $(".slideinLeft, .slideinRight").each(function() {
-            if ($(this).offset().top <= immediateScrollPos) {
-                $(this).addClass("fImgShow").css("transition", "transform 0.1s ease");
-            } else {
-                $(this).removeClass("fImgShow").css("transition", "none");
+            if ($(this).offset().top <= scrollPos) {
+                $(this).addClass("fImgShow").css("transition", "transform 0.5s ease");
             }
         });
-    });
-});
 
+        // スクロール時のアニメーション制御
+        $(window).on('scroll', function() {
+            let winScroll = $(window).scrollTop();
+            let immediateScrollPos = winScroll + winHeight;
+
+            $(".slideinLeft, .slideinRight").each(function() {
+                if ($(this).offset().top <= immediateScrollPos) {
+                    $(this).addClass("fImgShow").css("transition", "transform 0.1s ease");
+                } else {
+                    $(this).removeClass("fImgShow").css("transition", "none");
+                }
+            });
+        });
+    });
 </script>
 
 <script>
-
     //pagetop(に戻る部分)
 	$('[href="#top"]').click(function(){
 		$("html,body").animate({scrollTop:0},800);
@@ -99,8 +95,6 @@ $(window).on('load', function() {
 			$("#pageTop").fadeOut();
 		}
 	});
-	
-
 </script>
 
 <div id="wrap">
@@ -156,8 +150,8 @@ $(window).on('load', function() {
             <a href="#top">
                 <img src="images/logo.png" alt="課題カフェロゴ">
                 <h1>
-                    美味しいお酒とお肉料理のお店
-                    <span>Sample Cafe</span>
+                    <span class="h1-smaller">美味しいお酒とお肉料理のお店</span>
+                    <span class="h1-bigger">Sample Cafe</span>
                 </h1>
             </a>
         </div>
@@ -267,35 +261,35 @@ $(window).on('load', function() {
         <nav class="footerNavi">
             <div class="footerNaviMenu">
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
-                    <li><a href="aboutm.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="index.html">メニューサンプル</a></li>
                 </ul>
             </div>
             <ul class="snsList">
-				<li><a href="aboutm.html"><img src="images/icon-f.png" alt="facebook"></a></li>
-				<li><a href="aboutm.html"><img src="images/icon-i.png" alt="instagram"></a></li>
-				<li><a href="aboutm.html"><img src="images/icon-t.png" alt="x"></a></li>
+				<li><a href="index.html"><img src="images/icon-f.png" alt="facebook"></a></li>
+				<li><a href="index.html"><img src="images/icon-i.png" alt="instagram"></a></li>
+				<li><a href="index.html"><img src="images/icon-t.png" alt="x"></a></li>
             </ul>
         </nav>
         <p class="copyright"><small>Copyright&copy;課題カフェサイト All Rights Reserved.</small></p>
