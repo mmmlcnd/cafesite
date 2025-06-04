@@ -590,4 +590,13 @@ footer nav .footerNaviMenu {
     .site-header {
         display: none;
     }
+
+    .slider-main {
+        height: 60vh;       
+    }
+
+    .slider-main .slick-slide {
+        height: 60vh;       
+    }
+
 }
