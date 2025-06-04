@@ -4,8 +4,8 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<meta name="description" content="課題カフェサイト作成中">
-<meta name="author" content="課題カフェサイト">
+<meta name="description" content="カフェサイト">
+<meta name="author" content="カフェサイト">
 <meta name="format-detection" content="email=no,telephone=no,address=no">
 <title>カフェサイト</title>
 
@@ -16,11 +16,9 @@
 <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
 
-<link href="js/slick/slick-theme.css" rel="stylesheet">
 <link href="js/slick/slick.css" rel="stylesheet">
 
 <script src="js/script.js"></script>
-<script src="js/index.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -28,7 +26,15 @@
 <script>
 $(function () {
     $('.slider-main').slick({
-    centerMode: false
+    centerMode: false,
+    dots: true,
+    appendDots: $('.dots-2'),
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    fade: true,        // 横スライドではなくフェードに切り替え
+    speed: 2000,        // フェードの速さ（ミリ秒）
+    cssEase: 'linear' // フェードのイージング（滑らかに）
   });
 });
 </script>
@@ -146,7 +152,7 @@ $(function () {
 
         <div class="titleArea">
             <a href="#top">
-                <img src="images/logo.png" alt="課題カフェロゴ">
+                <img src="images/logo.png" alt="カフェロゴ">
                 <h1>
                     <span class="h1-smaller">美味しいお酒とお肉料理のお店</span>
                     <span class="h1-bigger">Sample Cafe</span>
