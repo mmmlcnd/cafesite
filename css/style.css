@@ -227,9 +227,9 @@ h2 {
     color: #333333;
     letter-spacing: 12px;
     margin: 10px;
-    height: 150px;
-     opacity: 0;
-      transform: translateY(20px);
+    /* height: 150px; */
+    opacity: 0;
+    transform: translateY(20px);
    }
 
 .headingBox.show {
@@ -243,6 +243,7 @@ h2 {
     padding: 20px;
     border: #D1D1D1 1px solid;
     width: 120px;
+    height: 150px;
     font-size: 5.3rem;
     text-shadow: 5px 5px lightgrey;
 }
@@ -611,7 +612,8 @@ footer nav .footerNaviMenuArea {
         position: absolute;
         top: 0;
         left: 220px;
-        width: 330px;
+        width: 32vw;
+        height: 32vw;
     }
 
 
@@ -683,3 +685,12 @@ footer nav .footerNaviMenuArea {
     }
 
 }
+
+@media screen and (max-width: 600px) {
+
+    footer nav .footerNaviMenuArea {
+        display: none;
+    }
+
+}
+
