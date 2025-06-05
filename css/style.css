@@ -660,4 +660,26 @@ footer nav .footerNaviMenuArea {
         letter-spacing: 0px;
     }
 
+    footer {
+        padding: 0;
+    }
+
+    footer nav .footerNaviMenuArea {
+        width: 100%;
+        padding: 40px 30px 0 30px;
+    }
+
+    .footerNaviMenuColumn {
+        padding: 30px 10px;
+    }
+
+    .footerNaviMenuColumn li {
+        text-align: left;
+        line-height: 35px;
+    }
+
+    .snsList li{
+        margin: 30px 20px 40px 20px;
+    }
+
 }
