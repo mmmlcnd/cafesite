@@ -28,7 +28,7 @@ img {
 }
 
 h1 {
-    color: white;
+    color: #fff;
     /* font-size: 1.5rem; 24px */
 }
 
@@ -162,8 +162,9 @@ header {
     z-index: 500;
     position: absolute;
     top: 0;
-    left: 38%;
-    opacity: 70%;
+    left: 50%;
+    transform: translateX(-50%);   
+    opacity: 0.7;
 }
 
 .titleArea a {
@@ -223,7 +224,8 @@ body {
     list-style: none;
     position: absolute;
     top: -50px;
-    left: 45%;
+    left: 50%;
+    transform: translateX(-50%); 
 }
 
 .slick-dots li {
@@ -263,7 +265,7 @@ main {
 .featureArea .featureItem {
     margin: 0 auto;
     display: flex;
-    background-color: white;
+    background-color: #fff;
     padding: 15px 0;
 }
 
@@ -294,44 +296,20 @@ main {
     transition: 0.3s cubic-bezier(0.75, 0, 0.25, 1);
 
 }
+
 .slideinLeft{
 	transform: translateX(calc(-50vw - 50%));
 }
+
 .slideinRight{
 	transform: translateX(calc(50vw + 50%));
 }
+
 .fImgShow{
 	transform: translateX(0);
 
 }
 
-/* 
-.slideinLeft {
-    animation: slideinLeft 3s infinite;
-  }
-  
-  @keyframes slideinLeft {
-    0% {
-      transform: translateX(-50px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
-
-  .slideinRight {
-    animation: slideinRight 3s infinite;
-  }
-  
-  @keyframes slideinRight {
-    0% {
-      transform: translateX(50px);
-    }
-    100% {
-      transform: translateX(0);
-    }
-  }
- */
 .featureArea .featureItem .fImgArea img {
     width: 100%;
 }
@@ -426,7 +404,7 @@ footer nav .footerNaviMenu {
 
 .footerNaviMenuColumn li a:link,
 .footerNaviMenuColumn li a:visited {
-    color: white;
+    color: #fff;
 }
 
 .footerNaviMenuColumn li a:hover {
@@ -452,7 +430,7 @@ footer nav .footerNaviMenu {
     padding: 10px 0;
     width: 100%;
     background-color: #9F1B3B;
-    color: white;
+    color: #fff;
     font-size: 1rem;
 }
 
@@ -519,7 +497,7 @@ footer nav .footerNaviMenu {
     }
 
         #drawer-checkbox:checked ~ #drawer-icon {
-        border: solid white 1px;
+        border: solid #fff 1px;
     }
 
 
@@ -549,9 +527,12 @@ footer nav .footerNaviMenu {
         right: 0;
         top: 0;
         width: 100%;
-        transform: translateX(100%);
-        transition: all 0.3s ease-in-out, 0s;
         background:rgba(0, 0, 0, 0.8);
+        z-index: 10;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0.95);
+        transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
     .menuCont {
@@ -561,7 +542,7 @@ footer nav .footerNaviMenu {
     }
 
     .menuCont li {
-        border:  solid white 1px;
+        border:  solid #fff 1px;
         padding: 30px;
         text-align: left;
 
@@ -570,12 +551,14 @@ footer nav .footerNaviMenu {
     .menuCont li a {
         text-decoration: none;
         font-size: 1.8rem;
-        color: white;
+        color: #fff;
     }
 
 
     #drawer-checkbox:checked ~ #gNavi {
-        transform: translateX(0);
+        opacity: 1;
+        /* transform: translateX(0); */
+        transform: scale(1);
         transition: all 0.3s ease-in-out;
     }
 
@@ -585,9 +568,9 @@ footer nav .footerNaviMenu {
         left: 0;
         top: 0;
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
         background: rgba(0, 0, 0, 0);
-        z-index: 100;
+        z-index: 1000;
         transition: all 0.3s ease-in-out, 0s;
     }
 
