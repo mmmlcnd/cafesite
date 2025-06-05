@@ -56,6 +56,19 @@ $(function () {
     });
 </script>
 
+<!-- h2スライドインJS -->
+<script>
+    let h2startPos = 200, h2winScrollTop = 0;
+    $(window).on('scroll',function(){
+        h2winScrollTop = $(this).scrollTop();
+        if (h2winScrollTop >= h2startPos) {
+            $('.headingBox').addClass('show');
+        } else {
+            $('.headingBox').removeClass('show');
+        }
+    });
+</script>
+
 <!-- fImgスライドインJS -->
 <script>
     let winHeight,winScroll,scrollPos;
