@@ -6,14 +6,14 @@
 }
 
 body {
-    color: #797979;
+    color: #666666;
     line-height: 1.5;
     font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro", "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", メイリオ, Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
 }
 
 a:link,
 a:visited {
-        color: #797979;
+    color: #797979;
 
 }
 
@@ -314,7 +314,6 @@ h2 {
 
 .fTextArea-left {
     padding: 10px 40px 10px 0;
-
 }
 
 .fItemTitle {
@@ -358,12 +357,10 @@ h2 {
 }
 
 .gotologArea span {
-    /* background-color: #9F1B3B; */
     padding: 10px 0 0 0;
 }
 
 .gotolog {
-    /* width: 150px; */
     padding: 10px 10px 0 10px;
 }
 
@@ -411,8 +408,6 @@ footer nav .footerNaviMenuArea {
 
 .footerNaviMenuColumn {
     padding: 30px 0;
-    /* background-color: #901636; */
-
 }
 
 .footerNaviMenuColumn li {
@@ -588,7 +583,6 @@ footer nav .footerNaviMenuArea {
 
     #drawer-checkbox:checked ~ #gNavi {
         opacity: 1;
-        /* transform: translateX(0); */
         transform: scale(1);
         transition: all 0.3s ease-in-out;
     }
@@ -635,6 +629,35 @@ footer nav .footerNaviMenuArea {
 
     .slider-main .slick-slide {
         height: 60vh;       
+    }
+
+    
+    .featureArea .featureItem {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .featureArea .featureItem .fImgArea,
+    .featureArea .featureItem .fTextArea {
+        width: 100%;
+    }
+
+    .featureArea .featureItem:nth-child(3),
+    .featureArea .featureItem:nth-child(5) {
+        display: block;
+    }
+
+    .fTextArea-right {
+        padding: 10px 0;
+    }
+
+    .fTextArea-left {
+        padding: 10px 0;
+    }
+
+    .fItemText {
+        line-height: 50px;
+        letter-spacing: 0px;
     }
 
 }
