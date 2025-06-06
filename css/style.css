@@ -42,25 +42,6 @@ header {
     position: relative;
 }
 
-.site-logo {
-    display: flex;
-    padding-left: 100px;
-}
-
-.site-logo img {
-    height: 80px;
-}
-
-.site-logo p {
-    color: #fff;
-    padding: 20px;
-    font-size: 14px;
-}
-
-.site-logo p span {
-    font-size: 24px;
-}
-
 .site-header {
     background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,1));
     /* padding: 10px; */
@@ -85,24 +66,61 @@ header {
 
 .site-logo__img {
     padding: 10px 0 10px 75px;
+    height: 80px;
+}
+
+.site-logo p {
+    color: #fff;
+    padding: 10px;
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-align: left;
+}
+
+.site-logo p span {
+    font-size: 24px;
+    letter-spacing: 10px;
 }
 
 .gnav__menu {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 65%;
 }
+
 .gnav__menu li {
-    width:150px;
     font-size: 24px;
+    padding: 0;
+
 }
 
 .gnav__menu li a {
     text-decoration: none;
     color: #fff;
+    position: relative;
+    display: inline-block;
+}
+
+.gnav__menu li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: #9F1B3B;
+    bottom: -10px; /* テキストから10px下 */
+    opacity: 0;
+    transition: opacity 0.1s ease;
+}
+
+.gnav__menu li a:hover::after {
+    opacity: 1;
 }
 
 .titleArea {
-    width: 380px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
     padding: 2%;
     text-align: center;
@@ -120,30 +138,29 @@ header {
 }
 
 .titleArea img {
-    width: 80px;
-    padding: 30px 0 0 0 ;
+    height: 80px;
+    padding: 20px 0 0 0 ;
 }
 
 h1 {
     padding: 30px 0 80px 0 ;
-        color: #fff;
+    color: #fff;
 }
 
 .h1-smaller {
-    font-size: 1.2rem;
+    font-size: 8px;
+    letter-spacing: 4px;
+    padding: 0 0 5px 0;
+
 }
 
 .h1-bigger {
-    font-size: 1.8rem;
+    font-size: 20px;
+    letter-spacing: 6px;
 }
 
 span {
     display: block;
-}
-
-.h1-smaller {
-    font-size: 0.8rem;
-    padding: 0 0 10px 0;
 }
 
 .mainV img {
@@ -620,11 +637,11 @@ footer nav .footerNaviMenuArea {
     }
 
     .titleArea {
-        position: absolute;
+        position:absolute;
         top: 0;
-        left: 220px;
-        width: 32vw;
-        height: 32vw;
+        left: 20%;
+        width: 30vw;
+        height: 30vw;
     }
 
 
@@ -633,6 +650,10 @@ footer nav .footerNaviMenuArea {
     }
 
     .h1-smaller {
+        font-size: 6px;
+    }
+
+    .h1-bigger {
         font-size: 13px;
     }
 
