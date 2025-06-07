@@ -64,7 +64,7 @@ header {
     align-items: center;
 }
 
-.site-logo__img {
+.site-logo_img {
     padding: 10px 0 10px 75px;
     height: 80px;
 }
@@ -82,27 +82,27 @@ header {
     letter-spacing: 10px;
 }
 
-.gnav__menu {
+.gnav_menu {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 65%;
 }
 
-.gnav__menu li {
+.gnav_menu li {
     font-size: 24px;
     padding: 0;
 
 }
 
-.gnav__menu li a {
+.gnav_menu li a {
     text-decoration: none;
     color: #fff;
     position: relative;
     display: inline-block;
 }
 
-.gnav__menu li a::after {
+.gnav_menu li a::after {
     content: '';
     position: absolute;
     left: 0;
@@ -114,7 +114,7 @@ header {
     transition: opacity 0.1s ease;
 }
 
-.gnav__menu li a:hover::after {
+.gnav_menu li a:hover::after {
     opacity: 1;
 }
 
@@ -250,11 +250,10 @@ h2 {
 .headingBox {
     display: flex;
     justify-content: center;
-    font-size: 4rem;
+    font-size: 3.7rem;
     color: #333333;
     letter-spacing: 12px;
     margin: 10px;
-    /* height: 150px; */
     opacity: 0;
     transform: translateY(20px);
    }
