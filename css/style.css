@@ -643,7 +643,6 @@ footer nav .footerNaviMenuArea {
         height: 30vw;
     }
 
-
     .titleArea h1 span {
         padding: 0;
     }
@@ -802,11 +801,38 @@ footer nav .footerNaviMenuArea {
 
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 375px) {  
+
+    .titleArea img {
+        height: 30px !important;
+        width: auto !important;
+        padding: 0 !important;
+
+    }
+
+    .titleArea h1 span {
+        padding: 0;
+    }
+
+
+    h1 {
+        padding: 0;
+        color: #fff;
+    }
+
+    .h1-smaller {
+        font-size: 3px;
+        letter-spacing: 0px;
+        padding: 0;
+    }
+
+    .h1-bigger {
+        font-size: 8px;
+        letter-spacing: 0px;
+    }
 
     footer nav .footerNaviMenuArea {
         display: none;
     }
 
 }
-
