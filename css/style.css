@@ -505,7 +505,7 @@ footer nav .footerNaviMenuArea {
         top: 0;
         left: 0;
         width: 100%;
-        height: 100%;         /* 画面全体を覆う */
+        /* height: 100%;         画面全体を覆う */
         z-index: 999;
         /* background-color: #901636 */
     }
@@ -713,6 +713,91 @@ footer nav .footerNaviMenuArea {
 
     .snsList li{
         margin: 30px 20px 40px 20px;
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+
+    .slider-main {
+        height: 45vh;       
+    }
+
+    .slider-main .slick-slide {
+        height: 45vh;       
+    }
+    
+    .headingBox {
+        font-size: 40px;
+        letter-spacing: 8px;
+    }
+
+    .headingDeco {
+        padding: 10px;
+        width: 80px;
+        height: 110px;
+        font-size: 60px;
+    }
+
+    .headingNoDeco {
+        margin: 0;
+    }
+
+    .headingJn {
+        font-size: 15px;
+    }
+
+    .fItemTitle {
+        font-size: 20px;
+    }
+
+    .fItemText {
+        font-size: 16px; 
+        letter-spacing: 0px;
+        line-height: 30px;
+        width: 100%;
+    }
+
+    .newsArea {
+        font-size: 15px;
+    }
+
+    footer {
+        padding: 0;
+    }
+
+    footer nav .footerNaviMenuArea {
+        width: 100%;
+        padding: 40px 30px 0 30px;
+    }
+
+    .footerNaviMenuColumn {
+        padding: 10px 10px;
+    }
+
+    .footerNaviMenuColumn li {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .snsList li{
+        margin: 10px 0 30px 0;
+    }
+
+    .snsList img {
+        width: 40px;
+    }
+
+    #pageTop {
+        bottom: 100px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+
+    #pageTop a {
+        font-size: 18px;
+        line-height: 45px;
     }
 
 }
