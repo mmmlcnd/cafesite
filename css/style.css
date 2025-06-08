@@ -736,6 +736,8 @@ footer nav .footerNaviMenuArea {
         width: 80px;
         height: 110px;
         font-size: 60px;
+        text-shadow: none;
+
     }
 
     .headingNoDeco {
@@ -801,34 +803,60 @@ footer nav .footerNaviMenuArea {
 
 }
 
-@media screen and (max-width: 375px) {  
+@media screen and (max-width: 552px) {  
 
     .titleArea img {
-        height: 30px !important;
+        height: 60px !important;
         width: auto !important;
-        padding: 0 !important;
+        padding: 20px 0 !important;
 
     }
-
-    .titleArea h1 span {
-        padding: 0;
-    }
-
 
     h1 {
         padding: 0;
-        color: #fff;
     }
 
     .h1-smaller {
         font-size: 3px;
-        letter-spacing: 0px;
+        letter-spacing: 2px;
         padding: 0;
     }
 
     .h1-bigger {
         font-size: 8px;
-        letter-spacing: 0px;
+        letter-spacing: 4px;
+    }
+
+}
+
+@media screen and (max-width: 480px) {  
+
+    .headingBox {
+        font-size: 25px;
+        letter-spacing: 3px;
+    }
+
+    .headingDeco {
+        padding: 0;
+        width: auto;
+        height: auto;
+        font-size: 25px;
+        border: none;
+    }
+
+    .headingNoDeco {
+        margin: 0;
+        padding: 0;
+    }
+
+    .headingJn {
+        /* margin: 0; */
+        font-size: 10px;
+        letter-spacing: 3px;
+    }
+
+    footer nav {
+        padding: 50px 0 0 0 ;
     }
 
     footer nav .footerNaviMenuArea {
