@@ -550,7 +550,7 @@ footer nav .footerNaviMenuArea {
         top: 15px;
     }
 
-        #drawer-checkbox:checked ~ #drawer-icon {
+    #drawer-checkbox:checked ~ #drawer-icon {
         border: solid #fff 1px;
     }
 
@@ -599,7 +599,6 @@ footer nav .footerNaviMenuArea {
         border:  solid #fff 1px;
         padding: 30px;
         text-align: left;
-
     }
 
     .menuCont li a {
@@ -737,7 +736,6 @@ footer nav .footerNaviMenuArea {
         height: 110px;
         font-size: 60px;
         text-shadow: none;
-
     }
 
     .headingNoDeco {
@@ -803,13 +801,42 @@ footer nav .footerNaviMenuArea {
 
 }
 
-@media screen and (max-width: 552px) {  
+@media screen and (max-width: 552px) { 
+
+    #drawer-icon {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 50px;
+        height: 50px;
+    }
+
+    #drawer-icon span {
+        position: absolute;
+        left: 10px;
+        top: 23px;
+        width: 30px;
+        height: 4px;
+    }
+
+    #drawer-icon span:before,
+    #drawer-icon span:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    #drawer-icon span:before {
+        top: -10px;
+    }
+
+    #drawer-icon span:after {
+        top: 10px;
+    }
 
     .titleArea img {
-        height: 60px !important;
         width: auto !important;
         padding: 20px 0 !important;
-
     }
 
     h1 {
@@ -817,15 +844,16 @@ footer nav .footerNaviMenuArea {
     }
 
     .h1-smaller {
-        font-size: 3px;
+        font-size: 6px;
         letter-spacing: 2px;
         padding: 0;
     }
 
     .h1-bigger {
-        font-size: 8px;
+        font-size: 12px;
         letter-spacing: 4px;
     }
+
 
 }
 
@@ -855,12 +883,49 @@ footer nav .footerNaviMenuArea {
         letter-spacing: 3px;
     }
 
+    .fItemTitle {
+        font-size: 20px;
+        padding: 0;
+    }
+
+    .fItemText {
+        font-size: 12px; 
+        letter-spacing: 0px;
+        line-height: 18px;
+    }
+
+    .newsArea {
+        font-size: 12px;
+    }
+
+    .newsItem li {
+        padding: 0;
+    }
+
     footer nav {
         padding: 50px 0 0 0 ;
     }
 
     footer nav .footerNaviMenuArea {
         display: none;
+    }
+
+}
+
+@media screen and (max-width: 480px) {  
+
+    .titleArea img {
+        height: 60px !important;
+        width: auto !important;
+    }
+
+    .h1-smaller {
+        font-size: 3px;
+        letter-spacing: 2px;
+    }
+
+    .h1-bigger {
+        font-size: 8px;
     }
 
 }
