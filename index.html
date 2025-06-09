@@ -15,9 +15,7 @@
 <link rel="icon" href="images/logo.png" sizes="16x16" type="image/png">
 <link rel="apple-touch-icon" sizes="180x180" href="images/logo.png">
 <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-<!-- <link href="js/slick/slick.css" rel="stylesheet"> -->
 
-<!-- <script src="js/script.js"></script> -->
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
@@ -38,19 +36,15 @@ $(function () {
 });
 </script>
 
-</head>
-
-<body id="top">
-
 <!-- メニューJS -->
 <script>
     let startPos = 300, winScrollTop = 0;
     $(window).on('scroll',function(){
         winScrollTop = $(this).scrollTop();
         if (winScrollTop >= startPos) {
-            $('.site-header').addClass('show');
+            $('.siteHeader').addClass('show');
         } else {
-            $('.site-header').removeClass('show');
+            $('.siteHeader').removeClass('show');
         }
     });
 </script>
@@ -115,6 +109,9 @@ $(function () {
 	});
 </script>
 
+</head>
+
+<body id="top">
 <div id="wrap">
     <header >
         <!-- ドロワーメニュー -->
@@ -136,27 +133,27 @@ $(function () {
         </aside>
 
         <!-- PCレイアウトメニュー -->
-        <aside class="flex flex--bet">
-            <nav class="gnav site-header">
-                <div class="site-logo">
-                    <img class="site-logo_img" src="images/logo.png" alt="logo">
+        <aside>
+            <nav class="gnav siteHeader">
+                <div class="siteLogo">
+                    <img class="siteLogo_img" src="images/logo.png" alt="logo">
                     <p>美味しいお酒とお肉料理のお店<span>Sample Cafe</span></p>
                 </div>
-                <ul class="gnav_menu flex flex--bet">
+                <ul class="gnav_menu">
                     <li>
-                        <a href="#sec1">ホーム</a>
+                        <a href="#top">ホーム</a>
                     </li>
                     <li>
-                        <a href="#sec1">当店について</a>
+                        <a href="#top">当店について</a>
                     </li>
                     <li>
-                        <a href="">メニュー</a>
+                        <a href="#top">メニュー</a>
                     </li>
                     <li>
-                        <a href="">アクセス</a>
+                        <a href="#top">アクセス</a>
                     </li>
                     <li>
-                        <a href="">ご予約・お問合せ</a>
+                        <a href="#top">ご予約・お問合せ</a>
                     </li>
                 </ul>
             </nav>
@@ -177,7 +174,7 @@ $(function () {
 			<li class="mainV"><img src="./images/cake3.jpg" alt=""></li>
 			<li class="mainV"><img src="./images/cake4.jpg" alt=""></li>
 		</ul>
-		  <div class="dots-2"></div>
+		<div class="dots-2"></div>
     </header>
     <main>
         <section id="contentsWrap">
@@ -268,56 +265,58 @@ $(function () {
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3280.6660809038726!2d135.19095871496958!3d34.6883761913863!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x60008efbd89bc4e7%3A0xd901fd97f5288c44!2z44CSNjUwLTAwMzQg5YW15bqr55yM56We5oi45biC5Lit5aSu5Yy65Lqs55S677yW77yX!5e0!3m2!1sja!2sjp!4v1580296857980!5m2!1sja!2sjp" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
                 </div>
             </section><!--/.accessArea-->
+
         </section><!--/#contentsWrap-->
     </main>
+    
     <footer>
         <nav class="footerNavi">
             <div class="footerNaviMenuArea">
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
                 </ul>
                 <ul class="footerNaviMenuColumn">
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
-                    <li><a href="index.html">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
+                    <li><a href="#top">メニューサンプル</a></li>
                 </ul>
             </div>
             <ul class="snsList">
-				<li><a href="index.html"><img src="images/icon-f.png" alt="facebook"></a></li>
-				<li><a href="index.html"><img src="images/icon-i.png" alt="instagram"></a></li>
-				<li><a href="index.html"><img src="images/icon-t.png" alt="x"></a></li>
+				<li><a href="#top"><img src="images/icon-f.png" alt="facebook"></a></li>
+				<li><a href="#top"><img src="images/icon-i.png" alt="instagram"></a></li>
+				<li><a href="#top"><img src="images/icon-t.png" alt="x"></a></li>
             </ul>
         </nav>
         <p class="copyright"><small>Copyright&copy;カフェサイト All Rights Reserved.</small></p>
