@@ -497,7 +497,7 @@ footer nav .footerNaviMenuArea {
     display: none;
 }
 
-@media screen and (max-width: 1114px) {
+@media screen and (max-width: 1200px) {
 
     #sideMenu {
         display: block;
@@ -653,11 +653,11 @@ footer nav .footerNaviMenuArea {
     }
 
     .slider-main {
-        height: 60vh;       
+        height: 75vh;       
     }
 
     .slider-main .slick-slide {
-        height: 60vh;       
+        height: 75vh;       
     }
 
     
@@ -713,14 +713,37 @@ footer nav .footerNaviMenuArea {
 
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 800px) {
 
-    .slider-main {
-        height: 45vh;       
+    #drawer-icon {
+        position: fixed;
+        right: 20px;
+        top: 20px;
+        width: 50px;
+        height: 50px;
     }
 
-    .slider-main .slick-slide {
-        height: 45vh;       
+    #drawer-icon span {
+        position: absolute;
+        left: 10px;
+        top: 23px;
+        width: 30px;
+        height: 4px;
+    }
+
+    #drawer-icon span:before,
+    #drawer-icon span:after {
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+    
+    #drawer-icon span:before {
+        top: -10px;
+    }
+
+    #drawer-icon span:after {
+        top: 10px;
     }
     
     .headingBox {
@@ -801,37 +824,6 @@ footer nav .footerNaviMenuArea {
 
 @media screen and (max-width: 552px) { 
 
-    #drawer-icon {
-        position: fixed;
-        right: 20px;
-        top: 20px;
-        width: 50px;
-        height: 50px;
-    }
-
-    #drawer-icon span {
-        position: absolute;
-        left: 10px;
-        top: 23px;
-        width: 30px;
-        height: 4px;
-    }
-
-    #drawer-icon span:before,
-    #drawer-icon span:after {
-        position: absolute;
-        left: 0;
-        top: 0;
-    }
-    
-    #drawer-icon span:before {
-        top: -10px;
-    }
-
-    #drawer-icon span:after {
-        top: 10px;
-    }
-
     .titleArea img {
         width: auto !important;
         padding: 20px 0 !important;
@@ -856,6 +848,14 @@ footer nav .footerNaviMenuArea {
 }
 
 @media screen and (max-width: 480px) {  
+
+    .slider-main {
+        height: 45vh;       
+    }
+
+    .slider-main .slick-slide {
+        height: 45vh;       
+    }
 
     .headingBox {
         font-size: 25px;
