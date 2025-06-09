@@ -652,7 +652,7 @@ footer nav .footerNaviMenuArea {
     }
 
     .slider-main {
-        height: 75vh;       
+        height: 75vh;     
     }
 
     .slider-main .slick-slide {
@@ -732,14 +732,6 @@ footer nav .footerNaviMenuArea {
         height: 3px;
     }
 
-    .slider-main {
-        height: 50vh;       
-    }
-
-    .slider-main .slick-slide {
-        height: 50vh;       
-    }
-    
     .headingBox {
         font-size: 40px;
         letter-spacing: 8px;
@@ -886,14 +878,6 @@ footer nav .footerNaviMenuArea {
 
     .h1-bigger {
         font-size: 8px;
-    }
-
-    .slider-main {
-        height: 60vh;   
-    }
-
-    .slider-main .slick-slide {
-        height: 60vh;      
     }
 
     .headingBox {
