@@ -32,16 +32,16 @@
     <!-- メインビジュアルスライダーslick -->
     <script>
       $(function () {
-        $(".slider-main").slick({
+        $('.slider-main').slick({
           centerMode: false,
           dots: true,
-          appendDots: $(".dots-2"),
+          appendDots: $('.dots-2'),
           arrows: false,
           autoplay: true,
           autoplaySpeed: 3000,
           fade: true, // 横スライドではなくフェードに切り替え
           speed: 2000, // フェードの速さ（ミリ秒）
-          cssEase: "linear", // フェードのイージング（滑らかに）
+          cssEase: 'linear', // フェードのイージング（滑らかに）
         });
       });
     </script>
@@ -50,12 +50,12 @@
     <script>
       let startPos = 300,
         winScrollTop = 0;
-      $(window).on("scroll", function () {
+      $(window).on('scroll', function () {
         winScrollTop = $(this).scrollTop();
         if (winScrollTop >= startPos) {
-          $(".siteHeader").addClass("show");
+          $('.siteHeader').addClass('show');
         } else {
-          $(".siteHeader").removeClass("show");
+          $('.siteHeader').removeClass('show');
         }
       });
     </script>
@@ -64,12 +64,12 @@
     <script>
       let h2startPos = 200,
         h2winScrollTop = 0;
-      $(window).on("scroll", function () {
+      $(window).on('scroll', function () {
         h2winScrollTop = $(this).scrollTop();
         if (h2winScrollTop >= h2startPos) {
-          $(".headingBox").addClass("show");
+          $('.headingBox').addClass('show');
         } else {
-          $(".headingBox").removeClass("show");
+          $('.headingBox').removeClass('show');
         }
       });
     </script>
@@ -77,32 +77,32 @@
     <!-- fImgスライドインJS -->
     <script>
       let winHeight, winScroll, scrollPos;
-      $(window).on("load", function () {
+      $(window).on('load', function () {
         let winScroll = $(window).scrollTop();
         let winHeight = $(window).height();
         let scrollPos = winHeight * 0.2 + winScroll; // 最初のアニメーションの開始位置
 
         // 初期表示時のアニメーション
-        $(".slideinLeft, .slideinRight").each(function () {
+        $('.slideinLeft, .slideinRight').each(function () {
           if ($(this).offset().top <= scrollPos) {
             $(this)
-              .addClass("fImgShow")
-              .css("transition", "transform 0.5s ease");
+              .addClass('fImgShow')
+              .css('transition', 'transform 0.5s ease');
           }
         });
 
         // スクロール時のアニメーション制御
-        $(window).on("scroll", function () {
+        $(window).on('scroll', function () {
           let winScroll = $(window).scrollTop();
           let immediateScrollPos = winScroll + winHeight;
 
-          $(".slideinLeft, .slideinRight").each(function () {
+          $('.slideinLeft, .slideinRight').each(function () {
             if ($(this).offset().top <= immediateScrollPos) {
               $(this)
-                .addClass("fImgShow")
-                .css("transition", "transform 0.1s ease");
+                .addClass('fImgShow')
+                .css('transition', 'transform 0.1s ease');
             } else {
-              $(this).removeClass("fImgShow").css("transition", "none");
+              $(this).removeClass('fImgShow').css('transition', 'none');
             }
           });
         });
@@ -112,15 +112,15 @@
     <script>
       //pagetop(に戻る部分)
       $('[href="#top"]').click(function () {
-        $("html,body").animate({ scrollTop: 0 }, 800);
+        $('html,body').animate({ scrollTop: 0 }, 800);
         return false;
       });
 
       $(window).scroll(function () {
         if ($(this).scrollTop() > 300) {
-          $("#pageTop").fadeIn();
+          $('#pageTop').fadeIn();
         } else {
-          $("#pageTop").fadeOut();
+          $('#pageTop').fadeOut();
         }
       });
     </script>
@@ -207,9 +207,12 @@
                 <img src="images/fImg1.png" alt="特徴写真" />
               </div>
               <div class="fTextArea fTextArea-right">
-                <h3 class="fItemTitle">ここに見出しを入れます。</h3>
+                <h3 class="fItemTitle">濃厚チョコレートケーキ</h3>
                 <p class="fItemText">
-                  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。
+                  しっとりと焼き上げたショコラスポンジに、まろやかなチョコクリームを何層にも重ねた贅沢なケーキ。
+                  カカオの豊かな香りと深みのある味わいは、ひとくちで心をほどいてくれます。
+                  濃厚なのに重すぎず、最後の一口までおいしく召し上がっていただけるように、甘さのバランスにもこだわりました。
+                  午後のコーヒータイムや、少しだけ自分を甘やかしたい日にぴったりの一品です。
                 </p>
               </div>
             </article>
@@ -219,9 +222,12 @@
                 <img src="images/fImg2.png" alt="特徴写真" />
               </div>
               <div class="fTextArea fTextArea-left">
-                <h3 class="fItemTitle">ここに見出しを入れます。</h3>
+                <h3 class="fItemTitle">ふわっと、とろけるミルキーケーキ</h3>
                 <p class="fItemText">
-                  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。
+                  ふわふわのスポンジ生地に、たっぷりのミルキークリームを丁寧にサンドした優しい味わいのケーキです。
+                  クリームには北海道産の生乳を使用し、口に入れた瞬間、ふんわりととけるような軽さが特徴。
+                  素材の風味を生かしたやさしい甘さで、お子さまからご年配の方まで幅広く愛されています。
+                  癒しの時間を過ごしたい日には、このケーキと温かい紅茶で、ゆったりとしたひとときをどうぞ。
                 </p>
               </div>
             </article>
@@ -231,9 +237,12 @@
                 <img src="images/fImg3.png" alt="特徴写真" />
               </div>
               <div class="fTextArea fTextArea-right">
-                <h3 class="fItemTitle">ここに見出しを入れます。</h3>
+                <h3 class="fItemTitle">香り広がる、ラテケーキ</h3>
                 <p class="fItemText">
-                  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。
+                  エスプレッソのコクとミルクのまろやかさをぎゅっと詰め込んだ、カフェラテのようなケーキ。
+                  ほんのりビターなコーヒークリームと、ふんわりしたスポンジが重なり合い、大人の甘さが口いっぱいに広がります。
+                  コーヒー好きの方はもちろん、甘さ控えめのスイーツをお探しの方にもおすすめです。
+                  落ち着いた午後に、音楽を聴きながらゆっくり味わってほしい、そんな一皿です。
                 </p>
               </div>
             </article>
@@ -243,9 +252,12 @@
                 <img src="images/fImg4.png" alt="特徴写真" />
               </div>
               <div class="fTextArea fTextArea-left">
-                <h3 class="fItemTitle">ここに見出しを入れます。</h3>
+                <h3 class="fItemTitle">果実がはじける、ブルーベリーケーキ</h3>
                 <p class="fItemText">
-                  ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。ここに説明を入れます。サンプルテキスト。
+                  ジューシーなブルーベリーをたっぷりとトッピングし、爽やかさと甘さのバランスが絶妙なケーキに仕上げました。
+                  果実の酸味とふんわりとしたクリームの甘さが口の中でとけ合い、あと味まで心地よい満足感を与えてくれます。
+                  見た目も華やかで、テーブルに彩りを添えること間違いなし。
+                  季節を感じる爽やかなスイーツとして、ティータイムやおしゃべりのお供にどうぞ。
                 </p>
               </div>
             </article>
@@ -371,19 +383,5 @@
       </footer>
     </div>
     <!--/#wrap-->
-
-    <!-- 画面サイズの確認用 -->
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        document.body.insertAdjacentHTML(
-          "beforeend",
-          `
-      <div style="position:fixed;bottom:10px;right:10px;background:#000;color:#fff;padding:5px 10px;font-size:12px;z-index:9999;border-radius:5px;">
-        ${window.innerWidth} x ${window.innerHeight}
-      </div>
-    `
-        );
-      });
-    </script>
   </body>
 </html>
